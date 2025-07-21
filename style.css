@@ -30,6 +30,7 @@ header p {
     font-family: "Montserrat", Arial, sans-serif;
     /* ou 24px */
 }
+
 nav {
     background-color: #f5a623;
     padding: 10px;
@@ -79,11 +80,49 @@ caption {
     margin-bottom: 10px;
     font-weight: bold;
 }
+h2 {
+  margin: 0;
+  padding-top: 0.5;
+  font-size: 30px;
+  font-weight: bold;
+  color: #355926;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+/* efeito hover */
+h2:hover {
+  color: #d86f45;
+}
+
+/* linha animada ao passar o mouse */
+h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background-color: #d86f45;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+h3 {
+    font-size: 1.3em;
+    text-align: center;
+}
 
 h4,
 h5 {
     text-align: center;
 }
+
 .servicos {
     padding: 40px 20px;
     text-align: center;
@@ -93,7 +132,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    max-width: 600px; /* Largura máxima para manter 2 colunas */
+    max-width: 600px;
     margin: 0 auto;
     gap: 20px;
 }
@@ -104,7 +143,7 @@ h5 {
     color: #355926;
     border-radius: 15px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 10px); /* 2 cards por linha, com espaçamento */
+    width: calc(50% - 10px);
     padding: 20px;
     box-sizing: border-box;
     transition: transform 0.3s ease;
@@ -124,20 +163,167 @@ h5 {
     font-size: 0.95em;
     line-height: 1.4;
 }
+
 .servicos {
     background-image: url('images/gato1.jpg');
     background-size: cover;
-    background-position: top right; /* alterado de center para top right */
+    background-position: top right;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 100px 20px 60px; /* aumentamos o padding-top */
+    padding: 100px 20px 60px;
     position: relative;
     z-index: 1;
 }
 
 .cards-servicos {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.blog-card {
+  background-color: #fffbe6;
+  border: 2px solid #f5a623;
+  border-radius: 15px;
+  padding: 30px 20px; 
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.06);
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-card h4 {
+    color: #f5a623;
+    margin-top: 10px;
+}
+.blog-card h3 {
+    color: #355926;
+    margin-top: 10px;
+}
+
+.blog-card p,
+.blog-card li {
+    color: #355926;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.blog-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-top: 10px;
+}
+
+.blog-card table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.blog-card caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #355926;
+}
+
+.blog-img {
+    text-align: right;
+    margin: 25px 0;
+}
+
+.blog-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}.blog-img-texto {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.blog-img-texto img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+}
+
+.blog-img-texto .texto-lateral {
+  flex: 1;
+  color: #355926;
+  font-size: 1em;
+  line-height: 1.6;
+}
+.formulario-estatico {
+  background: linear-gradient(to right, #2a9d8f, #006d5b);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 50px auto;
+  color: white;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.formulario-estatico h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.formulario-estatico form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.linha {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+select,
+input,
+textarea {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  min-width: 220px;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+button {
+  padding: 14px;
+  background-color: #d94e3b;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #b63c2b;
+}
