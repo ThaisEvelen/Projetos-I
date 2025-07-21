@@ -1,0 +1,143 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #355926;
+    background-color: #fff;
+}
+
+header {
+    background-image: url("images/fundo.jpg");
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    color: #f5a623;
+    text-align: center;
+    font-family: "Montserrat", Arial, sans-serif;
+    padding: 200px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: "Montserrat", Arial, sans-serif;
+    /* ou 48px */
+}
+
+header p {
+    font-size: 2em;
+    font-family: "Montserrat", Arial, sans-serif;
+    /* ou 24px */
+}
+nav {
+    background-color: #f5a623;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #355926;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 30px;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+th,
+td {
+    border: 1px solid #888;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f5a623;
+    color: #355926;
+}
+
+caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h4,
+h5 {
+    text-align: center;
+}
+.servicos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 600px; /* Largura máxima para manter 2 colunas */
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 2px solid #f5a623;
+    color: #355926;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* 2 cards por linha, com espaçamento */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: #f5a623;
+}
+
+.card p {
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+.servicos {
+    background-image: url('images/gato1.jpg');
+    background-size: cover;
+    background-position: top right; /* alterado de center para top right */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 20px 60px; /* aumentamos o padding-top */
+    position: relative;
+    z-index: 1;
+}
+
+.cards-servicos {
+  position: relative;
+  z-index: 2;
+}
+
+
