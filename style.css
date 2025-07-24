@@ -35,13 +35,30 @@ nav {
   background-color: #f5a623;
   padding: 10px;
   text-align: center;
+  z-index: 1000;
+    width: 100%;
+    margin: 0%;
 }
 
 nav a {
   color: #355926;
   margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+
+   
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 main {
