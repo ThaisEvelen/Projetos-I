@@ -383,6 +383,26 @@ textarea {
   height: 120px;
 }
 
+.app-img img {
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.app-img img:hover {
+  transform: scale(1.05);
+}
+
+
+
 button {
   padding: 14px;
   background-color: #d94e3b;
@@ -400,6 +420,16 @@ button:hover {
 
 /* MEDIA QUERY PARA TELAS PEQUENAS */
 @media screen and (max-width: 768px) {
+  .app-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .app-img img:hover {
+    transform: scale(1.02);
+  }
+
   #botao-topo {
     position: fixed;
     bottom: 10px;
@@ -487,7 +517,8 @@ button:hover {
     font-size: 14px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 6px;
   }
 
@@ -499,7 +530,9 @@ button:hover {
     width: 100%;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px;
     padding: 10px;
   }
