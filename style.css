@@ -511,47 +511,7 @@ footer {
 /* ================================
    RESPONSIVO
    ================================ */
-@media screen and (max-width: 768px) {
-  .card {
-    width: calc(50% - 12.5px);
-  }
-}
-  header {
-    padding: 120px 15px 60px; 
-    background-size: cover; 
-    background-position: top center; 
-  }
 
-  header h1 {
-    font-size: 2em; 
-  }
-
-  header p {
-    font-size: 1em;
-    padding: 8px 14px;
-  }
-
-@media screen and (max-width: 480px) {
-  header {
-    padding: 100px 10px 50px;
-  }
-
-  header h1 {
-    font-size: 1.6em;
-  }
-
-  header p {
-    font-size: 0.95em;
-    padding: 6px 12px;
-  }
-  .servicos img {
-        width: 100%;        
-        height: auto;       
-        display: block;    
-        margin: 0 auto;   
-        border-radius: 10px; 
-    }
-}
 
 
 @media screen and (max-width: 768px) {
@@ -592,60 +552,106 @@ footer {
     transform: scale(1.05);
   }
 
-  /* Botão topo reposicionado p/ não cobrir conteúdo */
-  #botao-topo {
-    bottom: 15px;
-    left: 15px;
-    right: auto;
-    width: 45px;
-    height: 45px;
-    background-color: #f3f3f3;
-    color: var(--verde);
-    border: 2px solid var(--verde);
-    font-size: 20px;
-  }
-
-  /* Cards 1 por linha */
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .card {
-    width: 90%;
-    font-size: 17px;
+    width: calc(50% - 12.5px);
   }
 
-  /* Blog e tabelas */
-  .blog {
-    padding: 25px 15px;
+  header {
+    padding: 120px 15px 60px;
+    /* menos altura, mantendo o topo */
+    background-size: cover;
+    /* mantém proporção e preenche */
+    background-position: top center;
+    /* não corta a parte de cima */
   }
 
-  table {
+  header h1 {
+    font-size: 2em;
+    /* título menor em telas pequenas */
+  }
+
+  header p {
+    font-size: 1em;
+    padding: 8px 14px;
+  }
+}
+
+/* Botão topo reposicionado p/ não cobrir conteúdo */
+#botao-topo {
+  bottom: 15px;
+  left: 15px;
+  right: auto;
+  width: 45px;
+  height: 45px;
+  background-color: #f3f3f3;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+  font-size: 20px;
+}
+
+/* Cards 1 por linha */
+.cards-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  font-size: 17px;
+}
+
+/* Blog e tabelas */
+.blog {
+  padding: 25px 15px;
+}
+
+table {
+  width: 100%;
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+/* Form */
+.formulario-estatico {
+  padding: 30px;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 17px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 100px 10px 50px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 0.95em;
+    padding: 6px 12px;
+  }
+
+  .servicos img {
     width: 100%;
-    font-size: 15px;
-  }
-
-  th,
-  td {
-    padding: 10px;
-  }
-
-  /* Form */
-  .formulario-estatico {
-    padding: 30px;
-  }
-
-  input,
-  textarea,
-  select,
-  button {
-    font-size: 17px;
-  }
-
-  /* Footer */
-  footer {
-    padding: 20px;
-    font-size: 14px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
   }
 }
