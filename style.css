@@ -12,6 +12,7 @@
   --laranja: #f5a623;
   --fundo-claro: #fffbe6;
   --cinza-escuro: #333333;
+  --cinza-mais-escuro: #1a1a1a; /* Para melhor contraste no texto */
   --branco: #ffffff;
   --sombra-suave: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
@@ -26,9 +27,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", Arial, sans-serif;
-  color: var(--verde);
+  color: var(--cinza-mais-escuro); /* Texto mais escuro para melhor leitura */
   background-color: var(--branco);
-  line-height: 1.7;
+  line-height: 1.8; /* Espaçamento um pouco maior */
   scroll-behavior: smooth;
 }
 
@@ -39,6 +40,12 @@ img {
 
 a {
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--laranja);
 }
 
 /* ---------- Tipografia ---------- */
@@ -48,18 +55,19 @@ h4,
 h5 {
   font-family: "Montserrat", Arial, sans-serif;
   margin-top: 0;
+  line-height: 1.3;
 }
 
 h2 {
-  margin: 0 0 20px 0;
-  font-size: 30px;
+  margin: 0 0 30px 0;
+  font-size: 32px;
   font-weight: 700;
   color: var(--laranja);
   text-align: center;
 }
 
 h3 {
-  font-size: 1.3em;
+  font-size: 1.5em;
   text-align: center;
   color: var(--verde);
 }
@@ -83,38 +91,40 @@ header {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: 700;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* sombra um pouco mais forte para destacar */
+  margin-bottom: 0;
 }
 
 header p {
-  font-size: 1.4em;
-  margin-top: 12px;
+  font-size: 1.5em;
+  margin-top: 15px;
   display: inline-block;
-  padding: 8px 14px;
-  border-radius: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
   color: #fff;
-  background: rgba(53, 89, 38, 0.65); /* verde translúcido p/ contraste */
+  background: rgba(53, 89, 38, 0.75); /* verde translúcido com opacidade um pouco maior */
 }
 
 /* ---------- Navegação ---------- */
 nav {
   background-color: var(--verde);
-  padding: 10px;
+  padding: 14px 0;
   text-align: center;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 6px;
+  gap: 12px;
 }
 
 nav ul li {
@@ -127,26 +137,29 @@ nav a {
   transition: transform 0.2s ease, color 0.2s ease;
   display: inline-block;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 8px 4px;
-  border-radius: 6px;
+  letter-spacing: 1.3px;
+  padding: 10px 16px;
+  border-radius: 8px;
 }
 
 nav a:hover,
 nav a:focus-visible {
-  transform: translateY(-1px);
-  color: #fffbe6;
-  outline: 2px solid transparent;
+  transform: translateY(-2px);
+  color: var(--branco);
+  background-color: var(--laranja);
+  outline: none;
 }
 
 /* ---------- Layout principal ---------- */
 main {
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
+  word-wrap: break-word;
+  color: var(--cinza-mais-escuro);
 }
 
 /* Botão subir topo */
@@ -154,11 +167,11 @@ main {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
   color: var(--laranja);
-  font-size: 20px;
+  font-size: 22px;
   border: 2px solid var(--laranja);
   border-radius: 50%;
   display: flex;
@@ -173,7 +186,7 @@ main {
 #botao-topo:hover,
 #botao-topo:focus-visible {
   background-color: var(--laranja);
-  color: #fff;
+  color: var(--branco);
   outline: none;
 }
 
@@ -181,18 +194,19 @@ main {
 table {
   width: 60%;
   border-collapse: collapse;
-  margin: 20px auto;
+  margin: 30px auto;
   font-family: Arial, sans-serif;
   background: #fff;
   box-shadow: var(--sombra-suave);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  font-size: 16px;
 }
 
 th,
 td {
   border: 1px solid #cfcfcf;
-  padding: 12px;
+  padding: 14px 18px;
   text-align: center;
 }
 
@@ -203,8 +217,8 @@ th {
 }
 
 caption {
-  font-size: 1.1em;
-  margin-bottom: 10px;
+  font-size: 1.2em;
+  margin-bottom: 15px;
   font-weight: 700;
   color: var(--verde);
 }
@@ -213,130 +227,133 @@ caption {
 .sobre-nos {
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background-color: var(--fundo-claro);
-  border-radius: 16px;
-  margin-bottom: 40px;
+  border-radius: 18px;
+  margin-bottom: 50px;
 }
 
 .card-sobre {
   background-color: #fff;
   border: 2px solid var(--laranja);
-  border-radius: 15px;
-  padding: 30px 20px;
+  border-radius: 18px;
+  padding: 35px 25px;
   box-shadow: var(--sombra-suave);
-  color: var(--verde);
+  color: var(--cinza-mais-escuro);
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   overflow: hidden;
-}
-
-.card-sobre p {
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-
+/* ---------- Blog ---------- */
 .blog {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  padding: 40px 10px;
+  gap: 60px;
+  padding: 50px 15px;
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
 }
 
 .blog-card {
   background-color: var(--fundo-claro);
   border: 2px solid var(--laranja);
-  border-radius: 15px;
-  padding: 30px 20px;
+  border-radius: 18px;
+  padding: 35px 25px;
   box-shadow: var(--sombra-suave);
+  color: var(--cinza-mais-escuro);
+  font-size: 1.05em;
+  line-height: 1.7;
 }
 
 .blog-card h3 {
   color: var(--verde);
-  margin-top: 10px;
+  margin-top: 0;
+  font-size: 1.6em;
 }
 
 .blog-card h4 {
   color: var(--laranja);
-  margin-top: 12px;
+  margin-top: 15px;
+  font-weight: 600;
 }
 
 .blog-card p,
 .blog-card li {
-  color: #222;
+  color: var(--cinza-mais-escuro);
+  margin-top: 12px;
   font-size: 1em;
-  margin-top: 10px;
   line-height: 1.7;
 }
 
 .blog-card ul {
-  padding-left: 20px;
+  padding-left: 25px;
   list-style-type: disc;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
+/* Tabelas dentro do blog ocupam 100% */
 .blog-card table {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .blog-card caption {
   text-align: left;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: var(--verde);
 }
 
-
+/* Imagem destacada */
 .blog-img {
   text-align: right;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .blog-img img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: var(--sombra-suave);
 }
 
-
+/* Imagem + texto lateral */
 .blog-img-texto {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  margin: 30px 0;
+  gap: 25px;
+  margin: 35px 0;
   flex-wrap: wrap;
 }
 
 .blog-img-texto img {
-  width: 250px;
-  border-radius: 10px;
+  width: 260px;
+  border-radius: 12px;
   box-shadow: var(--sombra-suave);
 }
 
 .blog-img-texto .texto-lateral {
   flex: 1;
-  color: var(--verde);
-  font-size: 1em;
-  line-height: 1.6;
+  color: var(--cinza-mais-escuro);
+  font-size: 1.05em;
+  line-height: 1.7;
 }
 
-
+/* ---------- Serviços ---------- */
 .servicos {
   background-image: url("images/gato1.jpg");
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 100px 20px 60px;
+  padding: 110px 20px 70px;
   position: relative;
   z-index: 1;
   max-width: 1100px;
-  margin: 0 auto 50px;
+  margin: 0 auto 55px;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -346,56 +363,57 @@ caption {
   z-index: 2;
 }
 
-
+/* grid de cards */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center; /* centraliza em telas largas */
   max-width: 900px;
   margin: 0 auto;
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.97);
   border: 2px solid var(--laranja);
-  color: var(--verde);
-  border-radius: 15px;
+  color: var(--cinza-mais-escuro);
+  border-radius: 18px;
   box-shadow: var(--sombra-suave);
-  width: calc(50% - 10px);
-  padding: 20px;
+  width: calc(50% - 12.5px);
+  padding: 25px;
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 .card h3 {
   margin-top: 0;
-  font-size: 1.25em;
+  font-size: 1.3em;
   color: var(--laranja);
 }
 
 .card p {
-  font-size: 0.98em;
-  line-height: 1.5;
+  font-size: 1.05em;
+  line-height: 1.6;
 }
 
+/* ---------- Formulário (Contato) ---------- */
 .formulario-estatico {
   background: linear-gradient(to right, var(--verde), #2a451d);
-  padding: 40px;
-  border-radius: 10px;
+  padding: 50px;
+  border-radius: 14px;
   max-width: 1100px;
-  margin: 50px auto;
+  margin: 60px auto;
   color: #fff;
   box-sizing: border-box;
   box-shadow: var(--sombra-suave);
 }
 
 .formulario-estatico h2 {
-  font-size: 28px;
-  margin-bottom: 25px;
+  font-size: 30px;
+  margin-bottom: 30px;
   text-align: center;
   color: #fff;
 }
@@ -403,24 +421,24 @@ caption {
 .formulario-estatico form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 
 .linha {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 select,
 input,
 textarea {
-  padding: 12px 14px;
-  border-radius: 30px;
+  padding: 14px 16px;
+  border-radius: 35px;
   border: none;
   outline: none;
   flex: 1;
-  font-size: 16px;
+  font-size: 17px;
   color: #333;
   background-color: #fff;
   min-width: 220px;
@@ -428,74 +446,83 @@ textarea {
 
 textarea {
   resize: vertical;
-  height: 120px;
+  height: 130px;
 }
 
+/* Botões */
 button {
-  padding: 14px;
+  padding: 16px;
   background-color: var(--laranja);
   color: var(--verde);
   font-weight: 700;
   border: none;
-  border-radius: 10px;
+  border-radius: 14px;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
 }
 
 button:hover,
 button:focus-visible {
-  background-color: #d28d1f; /
-  transform: translateY(-1px);
+  background-color: #d28d1f; /* laranja mais escuro */
+  transform: translateY(-2px);
   outline: none;
 }
 
+/* ---------- App (Imagem protótipo) ---------- */
 .app-img {
   display: flex;
   justify-content: center;
-  margin: 0 auto 30px;
+  margin: 0 auto 35px;
   max-width: 1100px;
 }
 
 .app-img img {
   width: 100%;
-  border-radius: 25px;
+  border-radius: 30px;
   box-shadow: var(--sombra-suave);
   transition: transform 0.3s ease;
 }
 
 .app-img img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
+/* ---------- Rodapé ---------- */
 footer {
   background-color: var(--cinza-escuro);
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin-top: 30px;
+  padding: 25px;
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-
+/* ================================
+   RESPONSIVO
+   ================================ */
 @media screen and (max-width: 992px) {
   .card {
-    width: calc(50% - 10px);
+    width: calc(50% - 12.5px);
   }
 }
 
 @media screen and (max-width: 768px) {
+  /* Header menor */
   header {
-    padding: 60px 20px;
+    padding: 70px 20px;
   }
 
   header h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   header p {
-    font-size: 16px;
+    font-size: 17px;
   }
 
+  /* Nav empilhado */
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -509,26 +536,26 @@ footer {
 
   nav a {
     display: block;
-    padding: 12px;
+    padding: 14px;
     text-align: center;
     color: var(--laranja);
   }
 
   nav a:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 
   /* Botão topo reposicionado p/ não cobrir conteúdo */
   #botao-topo {
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
     right: auto;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: #f3f3f3;
     color: var(--verde);
     border: 2px solid var(--verde);
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* Cards 1 por linha */
@@ -539,39 +566,39 @@ footer {
 
   .card {
     width: 90%;
-    font-size: 16px;
+    font-size: 17px;
   }
 
   /* Blog e tabelas */
   .blog {
-    padding: 20px 10px;
+    padding: 25px 15px;
   }
 
   table {
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   th,
   td {
-    padding: 8px;
+    padding: 10px;
   }
 
   /* Form */
   .formulario-estatico {
-    padding: 24px;
+    padding: 30px;
   }
 
   input,
   textarea,
   select,
   button {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   /* Footer */
   footer {
-    padding: 15px;
+    padding: 20px;
     font-size: 14px;
   }
 }
