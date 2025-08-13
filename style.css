@@ -511,19 +511,19 @@ footer {
 /* ================================
    RESPONSIVO
    ================================ */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .card {
     width: calc(50% - 12.5px);
   }
 }
   header {
-    padding: 120px 15px 60px; /* menos altura, mantendo o topo */
-    background-size: cover; /* mantém proporção e preenche */
-    background-position: top center; /* não corta a parte de cima */
+    padding: 120px 15px 60px; 
+    background-size: cover; 
+    background-position: top center; 
   }
 
   header h1 {
-    font-size: 2em; /* título menor em telas pequenas */
+    font-size: 2em; 
   }
 
   header p {
