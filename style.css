@@ -632,6 +632,12 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+.servicos {
+    background-image: url("images/gato1.jpg"); /
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: top center;
+  }
 
 @media screen and (max-width: 480px) {
   header {
@@ -646,13 +652,11 @@ footer {
     font-size: 0.95em;
     padding: 6px 12px;
   }
-
-  @media screen and (max-width: 480px) {
+  
   .servicos {
     background-image: url("images/gato1.jpg"); /* garante que a imagem sempre carregue */
     background-size: contain; /* mostra a imagem inteira */
     background-repeat: no-repeat; /* evita repetição */
     background-position: top center;
   }
-}
 }
