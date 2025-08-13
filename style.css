@@ -648,8 +648,7 @@ footer {
   }
 
   .servicos {
-    background-size: contain; /* mostra a imagem inteira */
-    background-repeat: no-repeat; /* evita repetição */
-    background-position: center; /* centraliza */
+    background-size: cover; /* mostra a imagem inteira */
+    background-position: top center; /* centraliza */
 }
 }
