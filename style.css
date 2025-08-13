@@ -515,6 +515,17 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+  /* Cards 1 por linha no mobile */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    font-size: 17px;
+  }
+
 
   /* Header menor */
   header {
@@ -589,16 +600,7 @@ footer {
   font-size: 20px;
 }
 
-/* Cards 1 por linha */
-.cards-container {
-  flex-direction: column;
-  align-items: center;
-}
 
-.card {
-  width: 90%;
-  font-size: 17px;
-}
 
 /* Blog e tabelas */
 .blog {
@@ -633,7 +635,6 @@ footer {
   font-size: 14px;
 }
 
-
 @media screen and (max-width: 480px) {
   header {
     padding: 100px 10px 50px;
@@ -649,9 +650,9 @@ footer {
   }
 
   .servicos {
-    background-image: url("images/gato1.jpg"); /* garante que a imagem sempre carregue */
-    background-size: contain; /* mostra a imagem inteira */
-    background-repeat: no-repeat; /* evita repetição */
-    background-position: top center;
-  }
+    background-image: url('images/gato1.jpg'); /* garante que a imagem carregue */
+    background-repeat: no-repeat;
+    background-size: cover; /* mostra a imagem inteira */
+    background-position: top center; /* centraliza */
+}
 }
