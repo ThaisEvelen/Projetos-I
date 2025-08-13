@@ -515,6 +515,18 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+/* Botão topo reposicionado p/ não cobrir conteúdo */
+#botao-topo {
+  bottom: 15px;
+  left: 15px;
+  right: auto;
+  width: 45px;
+  height: 45px;
+  background-color: #f3f3f3;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+  font-size: 20px;
+}
   /* Cards 1 por linha no mobile */
   .cards-container {
     flex-direction: column;
@@ -587,18 +599,7 @@ footer {
   }
 }
 
-/* Botão topo reposicionado p/ não cobrir conteúdo */
-#botao-topo {
-  bottom: 15px;
-  left: 15px;
-  right: auto;
-  width: 45px;
-  height: 45px;
-  background-color: #f3f3f3;
-  color: var(--verde);
-  border: 2px solid var(--verde);
-  font-size: 20px;
-}
+
 
 
 
@@ -634,7 +635,6 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
-
 @media screen and (max-width: 480px) {
   header {
     padding: 100px 10px 50px;
