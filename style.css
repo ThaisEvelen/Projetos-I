@@ -648,5 +648,14 @@ footer {
     font-size: 0.95em;
     padding: 6px 12px;
   }
-  
+  .cards-container {
+    flex-direction: column;
+    align-items: stretch; /* ocupa toda a largura */
+  }
+
+  .card {
+    width: 100%;       /* ocupa a tela inteira */
+    max-width: none;   /* sem limite fixo */
+    box-sizing: border-box;
+  }
 }
