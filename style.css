@@ -824,6 +824,14 @@ footer {
     padding: 8px 12px;
     border-radius: 8px;
   }
+  .header-loja {
+    align-items: flex-end; 
+    padding-bottom: 20px;  
+  }
+
+  .header-loja h1 {
+    font-size: 2em; 
+  }
 
   /* Cards de serviço em coluna */
   .cards-container {
@@ -899,19 +907,6 @@ footer {
     border-radius: 6px;
   }
 
-  /* H1 do hotelzinho fixo no topo */
-  .header-hotelzinho {
-    position: relative;
-  }
-
-  .header-hotelzinho h1 {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-  }
-
   /* Header geral */
   header {
     padding: 80px 10px 40px;
@@ -978,7 +973,14 @@ footer {
   td {
     padding: 8px;
   }
+  .header-loja {
+    align-items: flex-end;
+    padding-bottom: 15px;
+  }
 
+  .header-loja h1 {
+    font-size: 1.8em;
+  }
   /* Formulário */
   .formulario-estatico {
     padding: 20px;
