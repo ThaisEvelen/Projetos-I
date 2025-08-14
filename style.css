@@ -456,7 +456,7 @@ caption {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
   background-position: center;
-  height: 800px;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -560,7 +560,7 @@ caption {
   transition: transform 0.3s ease;
 }
 
-/* --- IMAGEM padronizada e centralizada --- */
+
 .produto-card img {
   width: 100%;
   height: 180px;
