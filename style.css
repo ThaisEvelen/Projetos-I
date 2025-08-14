@@ -455,8 +455,8 @@ caption {
 #banho-tosa {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
-  background-position: top center;
-  height: 1100px;
+  background-position: center;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
