@@ -456,7 +456,7 @@ caption {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
   background-position: top center;
-  height: 900px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,7 +493,7 @@ caption {
 }
 
 .header-veterinario {
-  background-image: url("images/vete.jpg");
+  background-image: url("images/veterinario.jpg");
   background-size: cover;
   background-position: center;
   height: 700px;
@@ -807,13 +807,8 @@ footer {
   .header-hotelzinho,
   .header-veterinario,
   .header-loja {
-    height: auto;
-    padding: 60px 15px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-start; /* começa do topo */
-    justify-content: center;
+  background-position: top center; 
+    height: 300px;
   }
 
   /* Títulos nas capas */
@@ -885,13 +880,9 @@ footer {
   .header-hotelzinho,
   .header-veterinario,
   .header-loja {
-    height: auto;
-    padding: 60px 15px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+     .header-hotelzinho {
+    background-position: top center; 
+    height: 200px;
   }
 
   /* Títulos mais compactos */
@@ -992,4 +983,5 @@ footer {
   .formulario-estatico {
     padding: 20px;
   }
+}
 }
