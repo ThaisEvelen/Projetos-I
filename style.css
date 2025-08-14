@@ -456,7 +456,7 @@ caption {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
   background-position: center;
-  height: 900px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -544,8 +544,8 @@ caption {
   border: 2px solid var(--laranja);
 }
 .loja-produtos.gatos {
-  background-color: #f9f7ff; 
-  border: 2px solid #b399ff;
+  background-color: #e6f9e6; 
+  border: 2px solid #355926;
 }
 .loja-produtos h2 {
   font-size: 2em;
@@ -557,7 +557,7 @@ caption {
 }
 
 .loja-produtos.gatos h2 {
-  color: #6b4aff;
+  color:  #355926;
 }
 
 
