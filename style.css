@@ -534,10 +534,32 @@ caption {
 
 .loja-produtos {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   padding: 50px 20px;
   text-align: center;
+  border-radius: 15px;
 }
+.loja-produtos.caes {
+  background-color: #fff8f0; 
+  border: 2px solid var(--laranja);
+}
+.loja-produtos.gatos {
+  background-color: #f9f7ff; 
+  border: 2px solid #b399ff;
+}
+.loja-produtos h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.loja-produtos.caes h2 {
+  color: var(--laranja);
+}
+
+.loja-produtos.gatos h2 {
+  color: #6b4aff;
+}
+
 
 .produtos-container {
   display: grid;
@@ -559,7 +581,6 @@ caption {
   text-align: center;
   transition: transform 0.3s ease;
 }
-
 
 .produto-card img {
   width: 100%;
@@ -913,7 +934,7 @@ footer {
 
   /* Header geral */
    header {
-    background-position: top center; /* mantém logo visível */
+    background-position: top center; 
     padding: 50px 10px 8px;
   }
 
