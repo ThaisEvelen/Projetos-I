@@ -456,7 +456,7 @@ caption {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
   background-position: center;
-  height: 700px;
+  height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,7 +493,7 @@ caption {
 }
 
 .header-veterinario {
-  background-image: url("images/veterinario.jpg");
+  background-image: url("images/vete.jpg");
   background-size: cover;
   background-position: center;
   height: 700px;
@@ -610,6 +610,17 @@ caption {
 .produto-card:hover {
   transform: translateY(-5px);
 }
+.header-banho-tosa h1,
+.header-hotelzinho h1,
+.header-veterinario h1,
+.header-loja h1 {
+  background: rgba(0,0,0,0.4); 
+  color: #fff; 
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: inline-block; 
+}
+
 
 /* ---------- Formulário (Contato) ---------- */
 .formulario-estatico {
