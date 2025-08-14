@@ -476,7 +476,7 @@ caption {
   background-image: url("images/hotelzinho.jpg");
   background-size: cover;
   background-position: center;
-  height: 900px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -496,7 +496,7 @@ caption {
   background-image: url("images/veterinario.jpg");
   background-size: cover;
   background-position: center;
-  height: 900px;
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
