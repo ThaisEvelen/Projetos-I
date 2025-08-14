@@ -869,24 +869,35 @@ footer {
 
 @media screen and (max-width: 480px) {
 
-  /* Ajuste geral das capas */
+  /* Mantém ajustes das capas */
   #banho-tosa,
   .header-hotelzinho,
   .header-veterinario,
   .header-loja {
-    padding-top: 80px;
-    padding-bottom: 40px;
+    height: auto;
+    padding: 60px 15px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
 
+  /* Títulos mais compactos */
   .header-banho-tosa h1,
   .header-hotelzinho h1,
   .header-veterinario h1,
   .header-loja h1 {
     font-size: 1.5em;
     margin-top: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
   }
 
-  /* H1 do hotelzinho no topo fixo */
+  /* H1 do hotelzinho fixo no topo */
   .header-hotelzinho {
     position: relative;
   }
@@ -896,19 +907,12 @@ footer {
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.6em;
     width: 90%;
-    margin-top: 0;
-    text-align: center;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 6px;
   }
 
-  /* Header padrão */
+  /* Header geral */
   header {
-    padding: 100px 10px 50px;
+    padding: 80px 10px 40px;
   }
 
   header h1 {
@@ -920,15 +924,61 @@ footer {
     padding: 6px 12px;
   }
 
-  /* Cards de serviço 100% */
+  /* Menu continua empilhado */
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  nav li {
+    width: 100%;
+    border-bottom: 1px solid #2a451d;
+  }
+
+  nav a {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    color: var(--laranja);
+    background-color: var(--verde);
+  }
+
+  nav a:hover {
+    background-color: var(--laranja);
+    color: var(--branco);
+  }
+
+  /* Cards 100% largura */
   .cards-container {
     flex-direction: column;
     align-items: stretch;
+    gap: 20px;
   }
 
   .card {
     width: 100%;
     max-width: none;
     box-sizing: border-box;
+  }
+
+  /* Blog e tabelas */
+  .blog {
+    padding: 20px 10px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  /* Formulário */
+  .formulario-estatico {
+    padding: 20px;
   }
 }
