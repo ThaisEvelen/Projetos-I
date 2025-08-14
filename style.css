@@ -456,7 +456,7 @@ caption {
   background-image: url("images/banho-tosa.jpg");
   background-size: cover;
   background-position: top center;
-  height: 700px;
+  height: 1100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -972,7 +972,6 @@ footer {
     color: var(--branco);
   }
 
-  /* Cards 100% largura */
   .cards-container {
     flex-direction: column;
     align-items: stretch;
