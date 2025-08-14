@@ -763,6 +763,10 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+  header {
+    background-position: top center; 
+    padding: 200px 20px 40px; 
+  }
   /* Botão topo */
   #botao-topo {
     bottom: 15px;
@@ -908,8 +912,9 @@ footer {
   }
 
   /* Header geral */
-  header {
-    padding: 80px 10px 40px;
+   header {
+    background-position: top center; /* mantém logo visível */
+    padding: 150px 20px 20px;
   }
 
   header h1 {
